@@ -1,0 +1,23 @@
+/* cuando se aprieta el boton ver reglas */
+
+.listaReglas{
+    height: 60%;
+    width: 100%;
+}
+
+.listaReglas .item{
+    text-align: center;
+    align-items: center;
+    color:#0A3871;
+    height: 18%;
+    margin-bottom: 5px;
+}
+
+.botonVolver{
+    cursor: pointer;
+    padding: 1rem;
+    background-color: #e5e5e5 ;
+    color:#0A3871;
+    border:none;
+    border-radius: 1.5rem;
+}

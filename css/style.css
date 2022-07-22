@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: #e5e5e5;
+    font-family: 'Inter', sans-serif;
+}
+
+.icono{
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.iniciarJuego, .ingresarPalabra{
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+.iniciarJuego{
+    width: 19.813rem;
+    height: 6.563rem;
+    background-color: #0A3871;
+    color:white;
+    border: none;
+}
+
+.ingresarPalabra{
+    width: 17.375rem;
+    height:  4.188rem;
+    background-color: #e5e5e5 ;
+    color:#0A3871;
+    border: 1px solid #0A3871;
+}
+
+.verReglas{
+    border: none;
+    color: #0A3871;
+    cursor: pointer;
+}
+
+.contenidoDescriptivo{
+    color:#0A3871;
+}
+
+.invisible{
+    display: none;
+}
