@@ -1,9 +1,10 @@
 let ingresarNuevaPalabra = document.querySelector(".ingresarPalabra");
 let cuandoHayPalabrasNuevas = [], cuandoNoHayPalabrasNuevas = [];
 
-let ingresoTexto = document.createElement("input"), zonaBotones = document.createElement("div"), descripcionPalabra = document.createElement("p") , seguirJuego = document.createElement("button"), cancelarJuego = document.createElement("button");
+let sectionAgregarPalabra = document.createElement("section"), opcionAgregarPalabra = document.createElement("opcionAgregarPalabra"), ingresoTexto = document.createElement("input"), zonaBotones = document.createElement("div"), descripcionPalabra = document.createElement("p") , seguirJuego = document.createElement("button"), cancelarJuego = document.createElement("button");
 
 ingresoTexto.setAttribute("placeholder", "Ingrese una palabra");
+ingresoTexto.setAttribute("maxlength", "8");
 
 ingresoTexto = agregarClase(ingresoTexto, "ingresoTexto");
 
@@ -14,27 +15,24 @@ descripcionPalabra.textContent = "Palabras de hasta 8 letras"
 
 seguirJuego = agregarClase(seguirJuego, "seguirJuego");
 seguirJuego = agregarClase(seguirJuego, "boton");
-seguirJuego.textContent = "Guardar y jugar";
+seguirJuego.textContent = "Guardar y empezar";
 
 cancelarJuego = agregarClase(cancelarJuego, "cancelarJuego");
 cancelarJuego = agregarClase(cancelarJuego, "boton");
 cancelarJuego.textContent = "Cancelar";
 
-cuandoHayPalabrasNuevas.push(ingresoTexto);
-cuandoHayPalabrasNuevas.push(descripcionPalabra);
-cuandoHayPalabrasNuevas.push(seguirJuego);
-cuandoHayPalabrasNuevas.push(cancelarJuego);
-
 zonaBotones.appendChild(descripcionPalabra);
 zonaBotones.appendChild(seguirJuego);
 zonaBotones.appendChild(cancelarJuego);
 
+opcionAgregarPalabra = agregarClase(opcionAgregarPalabra, "opcionAgregarPalabra");
+opcionAgregarPalabra.appendChild(ingresoTexto);
+opcionAgregarPalabra.appendChild(zonaBotones);
 
-invisible(cuandoHayPalabrasNuevas);
+sectionAgregarPalabra = agregarClase(sectionAgregarPalabra, "sectionAgregarPalabra");
+sectionAgregarPalabra.appendChild(opcionAgregarPalabra);
 
-function agregarAcontenidoPrincipal(){
-    
-}
+cuandoHayPalabrasNuevas.push(sectionAgregarPalabra);
 
 function agregarClase(elemento, clase){
     elemento.classList.add(clase);
@@ -52,8 +50,7 @@ ingresarNuevaPalabra.addEventListener("click", function(){
     obtenerElementos(cuandoNoHayPalabrasNuevas);
     invisible(cuandoNoHayPalabrasNuevas);
     visible(cuandoHayPalabrasNuevas);
-    contenidoPrincipal.appendChild(ingresoTexto);
-    contenidoPrincipal.appendChild(zonaBotones);
+    contenidoPrincipal.appendChild(sectionAgregarPalabra);
 });
 
 seguirJuego.addEventListener("click", function(){
