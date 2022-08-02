@@ -14,7 +14,6 @@
     border-radius: 1.5rem;
     padding: 1.5rem;
     font-size: 1.05rem;
-    cursor: pointer;
 }
 
 .iniciarJuego{
@@ -29,14 +28,13 @@
     width: 17.375rem;
     height:  4.188rem;
     background-color: #e5e5e5 ;
-    color:#0A3871;
     border: 1px solid #0A3871;
+    color:#0A3871;
 }
 
 .verReglas{
-    border: none;
     color: #0A3871;
-    cursor: pointer;
+    border: none;
 }
 
 .contenidoDescriptivo{

@@ -1,5 +1,6 @@
 let contenidoPrincipal = document.querySelector(".contenidoPrincipal");
 let verReglas = document.querySelector(".verReglas");
+let iniciarJuego = document.querySelector(".iniciarJuego");
 
 let cuandoNoHayReglas = [], cuandoHayReglas = [];
 
@@ -17,8 +18,20 @@ let boton = document.createElement("button");
 
 
 crearLista(reglas, cuandoHayReglas, lista, contenidoPrincipal);
-let botonVolver = crearBotonVolver(cuandoHayReglas, boton, contenidoPrincipal);
+let botonVolver = crearBotonVolver();
 cuandoHayReglas.push(botonVolver);
+
+function agregarClase(elemento, clase){
+    elemento.classList.add(clase);
+
+    return elemento;
+}
+
+function quitarClase(elemento, clase){
+    elemento.classList.remove(clase);
+
+    return elemento;
+}
 
 function obtenerElementos(arreglo){
     let iniciarJuego = document.querySelector(".iniciarJuego");
@@ -31,13 +44,13 @@ function obtenerElementos(arreglo){
 
 function invisible (arreglo){
     arreglo.forEach(function(elementos){
-        elementos.classList.add("invisible");
+        elementos = agregarClase(elementos, "invisible");
     });
 }
 
 function visible (arreglo){
     arreglo.forEach(function(elementos){
-        elementos.classList.remove("invisible");
+        elementos = quitarClase(elementos, "invisible");
     });
 }
 
@@ -50,7 +63,7 @@ function crearLista(arreglo, arreglito, lista){
         // item.setAttributeNode(atributo);
         // item.setAttribute("type", "circle");
 
-        item.classList.add("item");
+        item = agregarClase(item, "item");
 
         item.textContent = elemento;
         lista.appendChild(item);
@@ -60,17 +73,21 @@ function crearLista(arreglo, arreglito, lista){
 
 }
 
-function crearBotonVolver(contenidoPrincipal){
+function crearBotonVolver(){
 
-    let atributoType = document.createAttribute("type");
-    boton.setAttributeNode(atributoType);
     boton.setAttribute("type", "button");
 
-    boton.classList.add("botonVolver");
+    boton = agregarClase(boton, "botonVolver");
+    boton = agregarClase(boton, "boton");
+
     boton.textContent = "Volver al menu anterior"
 
     return boton;
 }
+
+iniciarJuego.addEventListener("click", function(){
+    alert("En desarrollo (?")
+});
 
 verReglas.addEventListener("click", function(){
     obtenerElementos(cuandoNoHayReglas);
@@ -78,9 +95,11 @@ verReglas.addEventListener("click", function(){
     visible(cuandoHayReglas);
     contenidoPrincipal.appendChild(lista);
     contenidoPrincipal.appendChild(boton);
-    botonVolver.addEventListener("click", function(){
-        invisible(cuandoHayReglas);
-        visible(cuandoNoHayReglas);
-    });
 });
 
+
+
+botonVolver.addEventListener("click", function(){
+    invisible(cuandoHayReglas);
+    visible(cuandoNoHayReglas);
+});

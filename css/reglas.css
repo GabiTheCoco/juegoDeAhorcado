@@ -9,16 +9,14 @@
 
 .listaReglas .item{
     color:#0A3871;
-    height: 19%;
+    height: 20%;
 }
 
 .botonVolver{
-    cursor: pointer;
     padding: .8rem;
     background-color: #e5e5e5 ;
     color:#0A3871;
-    border:none;
-    border-radius: 1.5rem;
+    border: none;
 }
 
 @media screen and (min-width: 768px) {
