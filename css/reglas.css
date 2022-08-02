@@ -2,15 +2,14 @@
 
 .listaReglas{
     height: 60%;
-    width: 100%;
+    width: 75vw;
+    text-align: left;
+    align-items: center;
 }
 
 .listaReglas .item{
-    text-align: center;
-    align-items: center;
     color:#0A3871;
-    height: 18%;
-    margin-bottom: 5px ;
+    height: 20%;
 }
 
 .botonVolver{
