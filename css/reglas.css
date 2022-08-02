@@ -9,14 +9,26 @@
 
 .listaReglas .item{
     color:#0A3871;
-    height: 20%;
+    height: 19%;
 }
 
 .botonVolver{
     cursor: pointer;
-    padding: 1rem;
+    padding: .8rem;
     background-color: #e5e5e5 ;
     color:#0A3871;
     border:none;
     border-radius: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .listaReglas{
+        width: auto;
+        height: 50%;
+    }
+
+    .listaReglas .item{
+        height: auto;
+        padding: .8rem;
+    }
 }
