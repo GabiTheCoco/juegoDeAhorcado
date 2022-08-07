@@ -1,0 +1,6 @@
+.encabezado{
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}

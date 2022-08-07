@@ -1,0 +1,12 @@
+.sectionAgregarPalabra{
+    height: 90%;
+}
+
+.opcionAgregarPalabra {
+    height: 100%;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

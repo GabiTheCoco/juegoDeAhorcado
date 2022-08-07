@@ -1,0 +1,9 @@
+.ingresoTexto{
+    height: 10%;
+    width: 80vw;
+    border: none;
+    text-align: center;
+    font-size: 1.7rem;
+    color:#0A3871;
+    outline: none;
+}

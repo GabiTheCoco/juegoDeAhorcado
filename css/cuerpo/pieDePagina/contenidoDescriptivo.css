@@ -1,0 +1,10 @@
+.contenidoDescriptivo{
+    display: flex;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenidoDescriptivo{
+    color:#0A3871;
+}

@@ -1,0 +1,13 @@
+.listaReglas{
+    height: 60%;
+    width: 75vw;
+    text-align: left;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .listaReglas{
+        width: auto;
+        height: 50%;
+    }
+}
