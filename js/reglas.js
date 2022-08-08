@@ -1,6 +1,5 @@
 let contenidoPrincipal = document.querySelector(".contenidoPrincipal");
 let verReglas = document.querySelector(".verReglas");
-let iniciarJuego = document.querySelector(".iniciarJuego");
 
 let cuandoNoHayReglas = [], cuandoHayReglas = [];
 
@@ -21,17 +20,6 @@ crearLista(reglas, cuandoHayReglas, lista, contenidoPrincipal);
 let botonVolver = crearBotonVolver();
 cuandoHayReglas.push(botonVolver);
 
-function agregarClase(elemento, clase){
-    elemento.classList.add(clase);
-
-    return elemento;
-}
-
-function quitarClase(elemento, clase){
-    elemento.classList.remove(clase);
-
-    return elemento;
-}
 
 function obtenerElementos(arreglo){
     let iniciarJuego = document.querySelector(".iniciarJuego");
@@ -44,13 +32,13 @@ function obtenerElementos(arreglo){
 
 function invisible (arreglo){
     arreglo.forEach(function(elementos){
-        elementos = agregarClase(elementos, "invisible");
+        elementos.classList.add("invisible");
     });
 }
 
 function visible (arreglo){
     arreglo.forEach(function(elementos){
-        elementos = quitarClase(elementos, "invisible");
+        elementos.classList.remove("invisible");
     });
 }
 
@@ -59,11 +47,7 @@ function crearLista(arreglo, arreglito, lista){
     arreglo.forEach(function(elemento){
         let item = document.createElement("li");
 
-        // let atributo = document.createAttribute("type");
-        // item.setAttributeNode(atributo);
-        // item.setAttribute("type", "circle");
-
-        item = agregarClase(item, "item");
+        item.classList.add("item");
 
         item.textContent = elemento;
         lista.appendChild(item);
@@ -77,17 +61,14 @@ function crearBotonVolver(){
 
     boton.setAttribute("type", "button");
 
-    boton = agregarClase(boton, "botonVolver");
-    boton = agregarClase(boton, "boton");
+    boton.classList.add("botonVolver");
+    boton.classList.add("boton");
 
     boton.textContent = "Volver al menu anterior"
 
     return boton;
 }
 
-iniciarJuego.addEventListener("click", function(){
-    alert("En desarrollo (?")
-});
 
 verReglas.addEventListener("click", function(){
     obtenerElementos(cuandoNoHayReglas);

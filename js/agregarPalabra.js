@@ -6,45 +6,33 @@ let sectionAgregarPalabra = document.createElement("section"), opcionAgregarPala
 ingresoTexto.setAttribute("placeholder", "Ingrese una palabra");
 ingresoTexto.setAttribute("maxlength", "8");
 
-ingresoTexto = agregarClase(ingresoTexto, "ingresoTexto");
+ingresoTexto.classList.add("ingresoTexto");
 
-zonaBotones = agregarClase(zonaBotones, "zonaBotones");
+zonaBotones.classList.add("zonaBotones");
 
-descripcionPalabra = agregarClase(descripcionPalabra, "descripcionPalabra");
-descripcionPalabra.textContent = "Palabras de hasta 8 letras"
+descripcionPalabra.classList.add("descripcionPalabra");
+descripcionPalabra.textContent = "Palabras de hasta 8 letras";
 
-seguirJuego = agregarClase(seguirJuego, "seguirJuego");
-seguirJuego = agregarClase(seguirJuego, "boton");
+seguirJuego.classList.add("seguirJuego");
+seguirJuego.classList.add("boton");
 seguirJuego.textContent = "Guardar y empezar";
 
-cancelarJuego = agregarClase(cancelarJuego, "cancelarJuego");
-cancelarJuego = agregarClase(cancelarJuego, "boton");
+cancelarJuego.classList.add("cancelarJuego");
+cancelarJuego.classList.add("boton");
 cancelarJuego.textContent = "Cancelar";
 
 zonaBotones.appendChild(descripcionPalabra);
 zonaBotones.appendChild(seguirJuego);
 zonaBotones.appendChild(cancelarJuego);
 
-opcionAgregarPalabra = agregarClase(opcionAgregarPalabra, "opcionAgregarPalabra");
+opcionAgregarPalabra.classList.add("opcionAgregarPalabra");
 opcionAgregarPalabra.appendChild(ingresoTexto);
 opcionAgregarPalabra.appendChild(zonaBotones);
 
-sectionAgregarPalabra = agregarClase(sectionAgregarPalabra, "sectionAgregarPalabra");
+sectionAgregarPalabra.classList.add("sectionAgregarPalabra");
 sectionAgregarPalabra.appendChild(opcionAgregarPalabra);
 
 cuandoHayPalabrasNuevas.push(sectionAgregarPalabra);
-
-function agregarClase(elemento, clase){
-    elemento.classList.add(clase);
-
-    return elemento;
-}
-
-function quitarClase(elemento, clase){
-    elemento.classList.remove(clase);
-
-    return elemento;
-}
 
 ingresarNuevaPalabra.addEventListener("click", function(){
     obtenerElementos(cuandoNoHayPalabrasNuevas);

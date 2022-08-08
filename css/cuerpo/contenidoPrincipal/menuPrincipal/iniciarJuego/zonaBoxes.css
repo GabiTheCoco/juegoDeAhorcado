@@ -1,0 +1,13 @@
+.zonaBoxes {
+    display: flex;
+    width: 80vw;
+    height: 10%;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.boxP{
+    border-bottom: 2px solid #0a3871;
+    width: 20%;
+    height: 100%;
+}

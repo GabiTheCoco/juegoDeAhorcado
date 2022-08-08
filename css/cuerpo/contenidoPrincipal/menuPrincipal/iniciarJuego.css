@@ -1,6 +1,7 @@
 .iniciarJuego{
-    width: 19.813rem;
-    height: 6.563rem;
+    width: 70vw;
+    max-width: 20rem;
+    height: 6.5rem;
     background-color: #0A3871;
     color:white;
     border: none;

@@ -1,6 +1,7 @@
 .ingresarPalabra{
-    width: 17.375rem;
-    height:  4.188rem;
+    width: 60vw;
+    max-width: 19rem;
+    height: 4.5rem;
     background-color: #e5e5e5 ;
     border: 1px solid #0A3871;
     color:#0A3871;
