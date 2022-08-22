@@ -9,6 +9,7 @@ opcionIniciarJuego = document.createElement("div"),
 zonaHorca = document.createElement("div"),
 zonaBoxes = document.createElement("div"),
 zonaFallos = document.createElement("div"),
+zonaInput = document.createElement ("input"),
 nuevoJuego = document.createElement("button"),
 desistir = document.createElement("button");
 
@@ -19,6 +20,9 @@ opcionIniciarJuego.classList.add("opcionIniciarJuego");
 zonaHorca.classList.add("zonaHorca");
 zonaBoxes.classList.add("zonaBoxes");
 zonaFallos.classList.add("zonaFallos");
+
+zonaInput.classList.add("zonaInput");
+zonaInput.setAttribute("placeholder", "Ingrese las letras deseadas")
 
 nuevoJuego.classList.add("nuevoJuego");
 nuevoJuego.textContent = "Nuevo juego";
@@ -34,6 +38,7 @@ desistir.classList.add("type", "button");
 opcionIniciarJuego.appendChild(zonaHorca);
 opcionIniciarJuego.appendChild(zonaBoxes);
 opcionIniciarJuego.appendChild(zonaFallos);
+opcionIniciarJuego.appendChild(zonaInput);
 opcionIniciarJuego.appendChild(nuevoJuego);
 opcionIniciarJuego.appendChild(desistir);
 
