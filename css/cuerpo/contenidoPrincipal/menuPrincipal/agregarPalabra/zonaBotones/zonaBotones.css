@@ -11,7 +11,7 @@
 .seguirJuego, .cancelarJuego{
     width: 70vw;
     height: 18%;
-    font-size: 1.05rem;
+    font-size: .9rem;
     padding: 1rem;
 }
 
